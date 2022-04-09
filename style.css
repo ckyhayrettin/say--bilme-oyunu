@@ -189,4 +189,8 @@ body .container .gamebox .gamebox_footer .btn_hide {
 body .container .gamebox .gamebox_footer .btn_show {
   display: inline-block;
 }
+
+.icon_hide {
+  fill: gray !important;
+}
 /*# sourceMappingURL=style.css.map */
