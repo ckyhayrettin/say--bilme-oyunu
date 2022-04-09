@@ -31,7 +31,10 @@ function oynat() {
             predictedNumber.innerText = 'yanlış bildiniz'
             predictedNumber.style.backgroundColor = 'red';
             predictedNumber.style.color = 'black';
+            iconId = '#icon' + (hak + 1);
+            document.querySelector(iconId).classList.add('icon_hide');
         }
+
         if (hak === 0) {
             lucky.innerText = 'hakkınız bitti'
             btnGues.classList.add('btn_hide');
