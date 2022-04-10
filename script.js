@@ -7,8 +7,6 @@ let btninput = document.querySelector('.btn_input');
 let predictedNumber = document.querySelector('.predicted_number');
 let random = document.querySelector('.random');
 
-
-
 btnGues.addEventListener('click', oynat);
 btnagain.addEventListener('click', resetBtn);
 
@@ -25,12 +23,15 @@ function oynat() {
             predictedNumber.innerText = 'tebrikler bildiniz';
             predictedNumber.style.backgroundColor = 'green';
             predictedNumber.style.color = 'black';
-            stopGame();
+            btnGues.classList.add('btn_hide');
+            btnagain.classList.remove('btn_hide');
 
         } else {
             predictedNumber.innerText = 'yanlış bildiniz'
             predictedNumber.style.backgroundColor = 'red';
             predictedNumber.style.color = 'black';
+            let hearts = document.querySelectorAll('#hearts > i')[hak - 0];
+            hearts.classList.add('can');
         }
         if (hak === 0) {
             lucky.innerText = 'hakkınız bitti'
@@ -39,10 +40,6 @@ function oynat() {
             random.textContent = ('bilmeniz gereken sayı :' + randomNumber)
         }
     }
-}
-
-function stopGame() {
-    btnGues.remove();
 }
 
 function resetBtn() {
@@ -54,8 +51,10 @@ function resetBtn() {
     lucky.innerText = '';
     random.innerText = '';
 
-    alert('tekrar başlayın')
+    for (let i = 0; i < 3; i++) {
+        let hearts = document.querySelectorAll('#hearts > i')[i];
+        hearts.classList.remove('can');
+    }
+
     randomNumber = Math.floor(Math.random() * 10) + 1;
 }
-
-//let heart = document.querySelectorAll('.gamebox_head > i')[hak - 1];

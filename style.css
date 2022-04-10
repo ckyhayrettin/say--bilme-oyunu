@@ -25,7 +25,7 @@ body {
 body .container {
   background-color: #FAEEE7;
   width: 50%;
-  height: 20rem;
+  height: 25rem;
   margin-right: auto;
   margin-left: auto;
   margin-top: 20vh;
@@ -83,26 +83,8 @@ body .container .gamebox .gamebox_head {
           align-items: center;
 }
 
-body .container .gamebox .gamebox_head .icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  stroke-width: 0;
-  stroke: red;
-  fill: red;
-  margin-left: 5px;
-  margin-top: 5px;
-}
-
-body .container .gamebox .gamebox_head .icon_grey {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  stroke-width: 0;
-  stroke: grey;
-  fill: grey;
-  margin-left: 5px;
-  margin-top: 5px;
+body .container .gamebox .gamebox_head .can {
+  color: grey !important;
 }
 
 body .container .gamebox .gamebox_body {
@@ -137,11 +119,17 @@ body .container .gamebox .gamebox_body .predicted_number {
   width: 75%;
   text-align: center;
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 body .container .gamebox .gamebox_body .lucky {
   font-size: 24px;
   border-bottom: solid 2px Red;
+  margin-bottom: 10px;
+}
+
+body .container .gamebox .gamebox_body .random {
+  margin-bottom: 10px;
 }
 
 body .container .gamebox .gamebox_footer {
@@ -182,7 +170,7 @@ body .container .gamebox .gamebox_footer .btn_again {
   cursor: pointer;
 }
 
-body .container .gamebox .gamebox_footer .btn_hide {
+body .container .gamebox .gamebox_footer .btn-hide {
   display: none;
 }
 
