@@ -42,6 +42,10 @@ function oynat() {
     }
 }
 
+function stopGame() {
+    btnGues.remove();
+}
+
 function resetBtn() {
     hak = 3;
     btnagain.classList.add('btn_hide');
