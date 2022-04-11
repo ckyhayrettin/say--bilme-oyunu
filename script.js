@@ -25,12 +25,12 @@ function oynat() {
             predictedNumber.style.color = 'black';
             btnGues.classList.add('btn_hide');
             btnagain.classList.remove('btn_hide');
+            stopGame();
 
         } else {
             predictedNumber.innerText = 'yanlış bildiniz'
             predictedNumber.style.backgroundColor = 'red';
-            predictedNumber.style.color = 'black';
-            let hearts = document.querySelectorAll('#hearts > i')[hak - 0];
+            predictedNumber.style.color = 'black'; let hearts = document.querySelectorAll('#hearts > i')[hak - 0];
             hearts.classList.add('can');
         }
         if (hak === 0) {
